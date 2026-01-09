@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>শুভ জন্মদিন 🤍</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Noto Serif Bengali', serif;
+}
+
+body{
+  min-height:100vh;
+  background: linear-gradient(180deg, #0b132b, #1c2541, #3a506b);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  color:#ffffff;
+  overflow:hidden;
+}
+
+/* floating glow orbs */
+.orb{
+  position:absolute;
+  width:200px;
+  height:200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 70%);
+  filter: blur(60px);
+  animation: float 9s ease-in-out infinite;
+}
+.orb.one{ top:6%; left:5%; }
+.orb.two{ bottom:8%; right:6%; animation-delay:4s; }
+
+@keyframes float{
+  0%{ transform:translateY(0);}
+  50%{ transform:translateY(-35px);}
+  100%{ transform:translateY(0);}
+}
+
+/* subtle sparkle */
+.spark{
+  position:absolute;
+  width:3px;
+  height:3px;
+  background:white;
+  border-radius:50%;
+  opacity:0.6;
+  animation: sparkle 6s linear infinite;
+}
+@keyframes sparkle{
+  0%{ transform:translateY(0); opacity:0;}
+  20%{opacity:0.8;}
+  100%{ transform:translateY(-100vh); opacity:0;}
+}
+
+.card{
+  position:relative;
+  width:100%;
+  max-width:420px;
+  background: rgba(255,255,255,0.09);
+  backdrop-filter: blur(16px);
+  border-radius:24px;
+  padding:24px 20px;
+  box-shadow:0 25px 50px rgba(0,0,0,0.4);
+  z-index:2;
+}
+
+.title{
+  text-align:center;
+  font-size:22px;
+  margin-bottom:18px;
+  letter-spacing:0.5px;
+}
+
+.text{
+  font-size:15px;
+  line-height:1.95;
+  white-space:pre-line;
+  color:#f2f2f2;
+}
+
+.signature{
+  margin-top:22px;
+  text-align:right;
+  font-size:14px;
+  opacity:0.9;
+}
+
+/* music button */
+.music-btn{
+  margin:18px auto 0;
+  display:block;
+  padding:8px 18px;
+  border-radius:20px;
+  border:none;
+  background:rgba(255,255,255,0.2);
+  color:white;
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="orb one"></div>
+<div class="orb two"></div>
+
+<!-- sparkles -->
+<div class="spark" style="left:20%; animation-delay:0s;"></div>
+<div class="spark" style="left:40%; animation-delay:2s;"></div>
+<div class="spark" style="left:65%; animation-delay:4s;"></div>
+<div class="spark" style="left:80%; animation-delay:1s;"></div>
+
+<div class="card">
+  <div class="title">শুভ জন্মদিন!🤍</div>
+
+  <div class="text">
+শুভ জন্মদিন!🤍
+তুমি জানো আমি তোমাকে ভালোবাসি, তাই আলাদা করে লুকানোর কিছু নেই। আবার এটাও জানি—সব ভালোবাসার শেষ এক জায়গায় হয় না। তবু আজকের দিনে চুপ থাকাটা আমার কাছে ঠিক লাগেনি।
+
+আমি তোমার কাছ থেকে কিছু চাইছি না, কোনো expectationও নেই। শুধু এটুকু বলতে চাই—তুমি আমার জীবনে এমন একজন মানুষ, যার জন্য অনুভব করাটা আমি কখনো regret করিনি। হয়তো সময়, পরিস্থিতি বা জায়গা আমাদের এক না, কিন্তু আমার respect আর care সবসময় একই ছিল!!
+
+আজ তোমার জন্মদিন। আমি চাই তুমি ভালো থাকো—মনের দিক থেকেও, জীবনের দিক থেকেও। যেই পথেই যাও, নিজের মতো করে শান্ত থাকতে পারলেই সেটাই সবচেয়ে জরুরি।আর নিজেকে কখনো একা ভেবো না, তোমার প্রয়োজনে আফি অলওয়েজ বি দেয়ার!
+
+এইটুকুই বলতে চেয়েছিলাম। শুভ জন্মদিন!🤍
+  </div>
+
+  <div class="signature">
+—তোমার সবসময়ের এক শুভাকাঙ্ক্ষী🛐
+  </div>
+
+  <button class="music-btn" onclick="playMusic()">▶ play music</button>
+</div>
+
+<!-- background music -->
+<audio id="bgm" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_6c3e8f4a5f.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function playMusic(){
+  document.getElementById("bgm").play();
+}
+</script>
+
+</body>
+</html>
